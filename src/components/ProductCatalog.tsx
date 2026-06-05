@@ -9,6 +9,33 @@ interface ProductCatalogProps {
   onOpenProductDetail: (product: Product) => void;
 }
 
+function StarRating({ rating, size = 3 }: { rating: number; size?: number }) {
+  const stars = [];
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.5;
+  for (let i = 0; i < 5; i++) {
+    if (i < fullStars) {
+      stars.push(
+        <Star key={i} className={`w-${size} h-${size} fill-[#D4A017] text-[#D4A017]`} />
+      );
+    } else if (i === fullStars && hasHalf) {
+      stars.push(
+        <span key={i} className="relative inline-block">
+          <Star className={`w-${size} h-${size} text-gray-300`} />
+          <span className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
+            <Star className={`w-${size} h-${size} fill-[#D4A017] text-[#D4A017]`} />
+          </span>
+        </span>
+      );
+    } else {
+      stars.push(
+        <Star key={i} className={`w-${size} h-${size} text-gray-300`} />
+      );
+    }
+  }
+  return <div className="flex items-center gap-0.5">{stars}</div>;
+}
+
 export default function ProductCatalog({ products, onAddToCart, onOpenProductDetail }: ProductCatalogProps) {
   const [selectedCategory, setSelectedCategory] = React.useState<string>("all");
   const [selectedSizeFilter, setSelectedSizeFilter] = React.useState<string>("all");
@@ -207,10 +234,8 @@ export default function ProductCatalog({ products, onAddToCart, onOpenProductDet
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                     <div>
                       {/* Rating & count */}
-                      <div className="flex items-center gap-1 text-[11px] text-neutral-500 mb-1">
-                        <div className="flex text-[#D4A017] gap-0.5">
-                          <Star className="w-3 h-3 fill-current" />
-                        </div>
+                      <div className="flex items-center gap-1.5 text-[11px] text-neutral-500 mb-1">
+                        <StarRating rating={product.rating} size={3} />
                         <span className="font-bold text-brand-black">{product.rating}</span>
                         <span className="text-[10px] text-neutral-400">({product.reviewsCount} reviews)</span>
                       </div>

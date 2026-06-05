@@ -11,6 +11,33 @@ import Footer from "./components/Footer";
 import { ShoppingBag, Star, Ruler, Sparkles, X, ChevronRight, Check } from "lucide-react";
 import { formatDualPrice } from "./types";
 
+function StarRating({ rating, size = 3 }: { rating: number; size?: number }) {
+  const stars = [];
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.5;
+  for (let i = 0; i < 5; i++) {
+    if (i < fullStars) {
+      stars.push(
+        <Star key={i} className={`w-${size} h-${size} fill-[#D4A017] text-[#D4A017]`} />
+      );
+    } else if (i === fullStars && hasHalf) {
+      stars.push(
+        <span key={i} className="relative inline-block">
+          <Star className={`w-${size} h-${size} text-gray-300`} />
+          <span className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
+            <Star className={`w-${size} h-${size} fill-[#D4A017] text-[#D4A017]`} />
+          </span>
+        </span>
+      );
+    } else {
+      stars.push(
+        <Star key={i} className={`w-${size} h-${size} text-gray-300`} />
+      );
+    }
+  }
+  return <div className="flex items-center gap-0.5">{stars}</div>;
+}
+
 export default function App() {
   const [activeTab, setActiveTab] = React.useState<string>("home");
   const [cartCount, setCartCount] = React.useState(0);
@@ -144,8 +171,13 @@ export default function App() {
                         <div>
                           <h4 className="heading-serif font-bold text-sm text-brand-black group-hover:text-brand-pink transition-colors leading-snug">{prod.name}</h4>
                           <p className="text-[10px] text-brand-gold font-medium uppercase tracking-wider">{prod.tagline}</p>
+                          <div className="flex items-center gap-1.5 text-[10px] pt-1.5 text-neutral-400">
+                            <StarRating rating={prod.rating} size={3} />
+                            <span className="font-bold text-brand-black">{prod.rating}</span>
+                            <span className="text-[9px]">({prod.reviewsCount})</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[10px] pt-1.5 text-neutral-400">
+                        <div className="flex items-center gap-1.5 text-[10px] pt-1 text-neutral-400">
                           <span className="text-brand-pink hover:underline uppercase font-bold tracking-widest text-[9px]">Examine Fit details &rarr;</span>
                         </div>
                       </div>
@@ -262,8 +294,15 @@ export default function App() {
                   </p>
                 </div>
 
-                <div className="heading-serif text-3xl font-extrabold text-brand-black">
-                  {formatDualPrice(detailedProduct.price)}
+                <div className="flex items-center gap-2">
+                  <div className="heading-serif text-3xl font-extrabold text-brand-black">
+                    {formatDualPrice(detailedProduct.price)}
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5 text-[11px]">
+                  <StarRating rating={detailedProduct.rating} size={3} />
+                  <span className="font-bold text-brand-black">{detailedProduct.rating}</span>
+                  <span className="text-neutral-400">({detailedProduct.reviewsCount} reviews)</span>
                 </div>
 
                 <p className="text-xs text-neutral-500 font-sans leading-relaxed">
