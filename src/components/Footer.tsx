@@ -30,8 +30,18 @@ export default function Footer({ setActiveTab }: FooterProps) {
 
             <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 pt-2">
               <span className="text-[10px] font-bold text-white uppercase tracking-wider block">Join curves dialogue &bull;</span>
-              <a href="#" className="text-xs text-brand-pink hover:text-brand-gold uppercase font-bold tracking-wider hover:underline">Instagram</a>
-              <a href="#" className="text-xs text-brand-pink hover:text-brand-gold uppercase font-bold tracking-wider hover:underline">Pinterest</a>
+              <a
+                href="https://www.instagram.com/classyglam_closet?igsh=bDB4NnVwbTducmp1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-brand-pink hover:text-brand-gold uppercase font-bold tracking-wider hover:underline"
+              >Instagram</a>
+              <a
+                href="https://www.facebook.com/classyglamcloset/directory_contact_info"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-brand-pink hover:text-brand-gold uppercase font-bold tracking-wider hover:underline"
+              >Facebook</a>
             </div>
           </div>
 
