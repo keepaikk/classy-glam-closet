@@ -65,8 +65,8 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
 
   if (isSuccess) {
     return (
-      <div className="bg-neutral-50 py-16 text-center min-h-[600px] flex items-center justify-center font-sans px-4" id="order-success-screen">
-        <div className="bg-white rounded-none p-10 max-w-xl mx-auto border border-gray-150 shadow-2xl relative overflow-hidden space-y-6 text-center animate-fade-in">
+      <div className="bg-neutral-50 py-12 sm:py-16 text-center min-h-[500px] sm:min-h-[600px] flex items-center justify-center font-sans px-3 sm:px-4" id="order-success-screen">
+        <div className="bg-white rounded-none p-6 sm:p-10 max-w-xl mx-auto border border-gray-150 shadow-2xl relative overflow-hidden space-y-6 text-center animate-fade-in">
           
           {/* Gold highlight banner background decorative seal */}
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#D4A017]" />
@@ -97,7 +97,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
             </div>
 
             {/* Ship to */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <span className="text-neutral-400 block text-[8px] tracking-widest uppercase font-bold">Billing Consignee</span>
                 <span className="font-bold text-brand-black block">{firstName} {lastName}</span>
@@ -208,7 +208,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#D4A017] flex items-center gap-1.5">
                   <Building className="w-4 h-4" /> Ship-to Identity & Communication
                 </h4>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[9px] font-bold text-neutral-500 uppercase tracking-wider block">First Name</label>
                     <input
@@ -259,7 +259,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                     placeholder="Ghana Post GPS GD-007-2524, Near Landmark"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[9px] font-bold text-neutral-500 uppercase tracking-wider block">City</label>
                     <input
@@ -301,7 +301,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                     placeholder="4111 2222 3333 4444"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[9px] font-bold text-neutral-500 uppercase tracking-wider block">Expiration Date (MM/YY)</label>
                     <input

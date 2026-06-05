@@ -177,7 +177,7 @@ export default function AIStylist({ userSizePreference }: AIStylistProps) {
           </div>
 
           {/* Right Column: Conversational Deck (lg:col-span-8) */}
-          <div className="lg:col-span-8 border border-gray-200 rounded-none overflow-hidden flex flex-col justify-between bg-neutral-50 h-[500px]" id="stylist-chat-panel">
+          <div className="lg:col-span-8 border border-gray-200 rounded-none overflow-hidden flex flex-col justify-between bg-neutral-50 h-[55dvh] min-h-[300px] sm:h-[500px]" id="stylist-chat-panel">
             
             {/* Top info and reset */}
             <div className="bg-white border-b border-gray-200 px-5 py-3.5 flex justify-between items-center shrink-0">

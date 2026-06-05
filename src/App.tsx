@@ -220,10 +220,10 @@ export default function App() {
 
       {/* 4. Luxury Product Detail Modal Screen */}
       {detailedProduct && (
-        <div className="fixed inset-0 z-55 overflow-y-auto flex items-center justify-center p-4" id="detail-modal-backdrop">
+        <div className="fixed inset-0 z-55 overflow-y-auto flex items-start justify-center p-2 sm:p-4 pt-8 sm:items-center sm:pt-4" id="detail-modal-backdrop">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-xs" onClick={() => setDetailedProduct(null)} />
-          
-          <div className="bg-white rounded-3xl w-full max-w-3xl overflow-hidden border border-brand-blush shadow-2xl relative z-10 animate-fade-in" id="detail-modal-block">
+
+          <div className="bg-white rounded-2xl sm:rounded-3xl w-full max-w-3xl max-h-[92dvh] overflow-y-auto border border-brand-blush shadow-2xl relative z-10 animate-fade-in" id="detail-modal-block">
             {/* Close button line */}
             <button 
               onClick={() => setDetailedProduct(null)}
@@ -236,7 +236,7 @@ export default function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left Column: Image representation */}
-              <div className="relative bg-brand-blush/25 min-h-[300px] md:h-full">
+              <div className="relative bg-brand-blush/25 min-h-[220px] sm:min-h-[300px] md:h-full">
                 <img 
                   src={detailedProduct.image} 
                   alt={detailedProduct.name}
@@ -247,7 +247,7 @@ export default function App() {
               </div>
 
               {/* Right Column: Information content and action */}
-              <div className="p-8 space-y-6 text-left">
+              <div className="p-5 sm:p-8 space-y-4 sm:space-y-6 text-left">
                 <div className="space-y-1">
                   <span className="text-[9px] font-bold text-brand-pink uppercase tracking-widest bg-brand-blush px-2.5 py-1 rounded-sm">
                     {detailedProduct.category === 'evening' ? "Elegant Evening" : detailedProduct.category === 'corporate' ? "Corporate Office Elegance" : "Casual Luxe"}
@@ -348,7 +348,7 @@ export default function App() {
         href="https://wa.me/message/RJWNMTN3VDGMG1"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#1da851] text-white px-4 py-3 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#1da851] text-white px-3 py-2.5 sm:px-4 sm:py-3 rounded-none shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in max-w-[calc(100vw-2rem)]"
         id="whatsapp-fab"
         title="Chat with us on WhatsApp"
       >

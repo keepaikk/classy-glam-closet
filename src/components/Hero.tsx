@@ -95,7 +95,7 @@ export default function Hero({ onExplore, onConsult, onSizeCalculator }: HeroPro
                 <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-brand-blush/10 pointer-events-none" />
 
                 {/* Decorative bottom title cards with sharp corners */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 p-4 border border-gray-100 flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 p-3 sm:p-4 border border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-0">
                   <div className="text-left">
                     <h5 className="text-[10px] font-bold text-brand-black tracking-widest uppercase">Classy Glam Closet</h5>
                     <p className="text-[9px] text-[#D4A017] tracking-wider uppercase">Confident & Bold silhouette</p>

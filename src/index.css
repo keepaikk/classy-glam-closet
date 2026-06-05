@@ -12,10 +12,19 @@
 }
 
 /* Custom global styles for Classy Glam Closet - Sleek Interface Theme */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: #FFFFFF;
   color: #111111;
   font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+button, a {
+  touch-action: manipulation;
 }
 
 .heading-serif, .serif {

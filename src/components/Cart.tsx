@@ -48,7 +48,7 @@ export default function Cart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
       <div className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-350" onClick={onClose} />
       
       <div className="absolute inset-y-0 right-0 max-w-full flex">
-        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between rounded-none border-l border-gray-100" id="cart-drawer-panel">
+        <div className="w-full max-w-md bg-white shadow-2xl flex flex-col justify-between rounded-none border-l border-gray-100" id="cart-drawer-panel">
           
           {/* Top Panel Header */}
           <div className="px-6 py-5 border-b border-gray-200 flex items-center justify-between bg-neutral-50 shrink-0">

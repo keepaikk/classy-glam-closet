@@ -28,7 +28,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
               We design luxury fashion explicitly calibrated for curvy, statuesque, and plus-size women. We believe true confidence stems from designs that respect, honor, and gracefully embellish every unique curve.
             </p>
 
-            <div className="flex space-x-3.5 pt-2">
+            <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 pt-2">
               <span className="text-[10px] font-bold text-white uppercase tracking-wider block">Join curves dialogue &bull;</span>
               <a href="#" className="text-xs text-brand-pink hover:text-brand-gold uppercase font-bold tracking-wider hover:underline">Instagram</a>
               <a href="#" className="text-xs text-brand-pink hover:text-brand-gold uppercase font-bold tracking-wider hover:underline">Pinterest</a>
@@ -103,7 +103,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
             <div className="bg-neutral-900 p-4 rounded-none border border-neutral-800 space-y-2 max-w-sm">
               <h5 className="font-bold text-[10px] text-white uppercase tracking-wider">Unlock Curves Newsletter</h5>
               <p className="text-[10px] text-neutral-500">Receive 15% off coupon on your first curated allocation purchase.</p>
-              <div className="flex gap-1.5 pt-1">
+              <div className="flex flex-wrap gap-1.5 pt-1">
                 <input
                   type="email"
                   placeholder="name@email.com"

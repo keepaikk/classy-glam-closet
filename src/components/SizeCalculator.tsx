@@ -310,7 +310,7 @@ export default function SizeCalculator({ onApplySize, onExploreMatching }: SizeC
                 </div>
 
                 {/* Fast shopping links */}
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <button
                     onClick={() => onExploreMatching("evening")}
                     className="flex-1 py-3 text-center bg-neutral-50 hover:bg-[#E85AA6] hover:text-white transition-all duration-150 font-bold uppercase text-[9px] tracking-widest text-neutral-700 rounded-none border border-gray-200 cursor-pointer"

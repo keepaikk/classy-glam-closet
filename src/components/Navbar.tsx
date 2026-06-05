@@ -92,7 +92,7 @@ export default function Navbar({ activeTab, setActiveTab, cartCount, openCart }:
               className="p-1 px-1.5 text-neutral-500 hover:text-[#E85AA6] relative transition-transform active:scale-95 duration-100 cursor-pointer text-[10px] tracking-[0.25em] uppercase font-bold flex items-center gap-1.5"
               aria-label="Open shopping bag"
             >
-              <span>Cart</span>
+              <span className="hidden sm:inline">Cart</span>
               <span className="text-[10px] text-[#E85AA6]">{cartCount > 0 ? `(${cartCount})` : "(0)"}</span>
             </button>
 
