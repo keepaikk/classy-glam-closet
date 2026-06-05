@@ -1,5 +1,6 @@
 import React from "react";
 import { ShoppingBag, Sparkles, Ruler, Search, Menu, X } from "lucide-react";
+import logoImg from "../assets/images/logo.png";
 
 interface NavbarProps {
   activeTab: string;
@@ -50,17 +51,16 @@ export default function Navbar({ activeTab, setActiveTab, cartCount, openCart }:
           </div>
 
           {/* Logo Section Center */}
-          <div 
-            onClick={() => { setActiveTab("home"); setMobileMenuOpen(false); }} 
+          <div
+            onClick={() => { setActiveTab("home"); setMobileMenuOpen(false); }}
             className="flex flex-col cursor-pointer select-none py-1 group text-center items-center"
             id="nav-logo-container"
           >
-            <h1 className="serif text-xl sm:text-2xl tracking-tighter font-bold text-brand-black transition-colors duration-300">
-              CLASSY GLAM <span className="glam-pink-text transition-colors duration-300">CLOSET</span>
-            </h1>
-            <p className="text-[8px] tracking-[0.3em] font-medium text-brand-gold uppercase -mt-0.5">
-              Fashion That Celebrates Every Curve
-            </p>
+            <img
+              src={logoImg}
+              alt="Classy Glam Closet"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            />
           </div>
 
           {/* Right Section Desktop */}

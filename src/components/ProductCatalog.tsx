@@ -1,6 +1,7 @@
 import React from "react";
 import { Product } from "../types";
 import { Star, ShoppingBag, Eye, Check, SlidersHorizontal, ArrowUpDown } from "lucide-react";
+import { formatDualPrice } from "../types";
 
 interface ProductCatalogProps {
   products: Product[];
@@ -242,7 +243,7 @@ export default function ProductCatalog({ products, onAddToCart, onOpenProductDet
                         <div>
                           <span className="text-[9px] text-neutral-400 block uppercase tracking-wider">Price</span>
                           <span className="text-base font-bold text-[#E85AA6]">
-                            ${product.price}
+                            {formatDualPrice(product.price)}
                           </span>
                         </div>
 

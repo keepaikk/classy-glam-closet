@@ -9,6 +9,7 @@ import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import { ShoppingBag, Star, Ruler, Sparkles, X, ChevronRight, Check } from "lucide-react";
+import { formatDualPrice } from "./types";
 
 export default function App() {
   const [activeTab, setActiveTab] = React.useState<string>("home");
@@ -136,7 +137,7 @@ export default function App() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
                         <span className="absolute bottom-4 left-4 text-white text-xs font-bold bg-[#111111]/80 px-2.5 py-1 rounded-sm uppercase tracking-wider font-sans">
-                          ${prod.price}
+                          {formatDualPrice(prod.price)}
                         </span>
                       </div>
                       <div className="p-4.5 space-y-1.5 flex-1 flex flex-col justify-between">
@@ -262,7 +263,7 @@ export default function App() {
                 </div>
 
                 <div className="heading-serif text-3xl font-extrabold text-brand-black">
-                  ${detailedProduct.price}
+                  {formatDualPrice(detailedProduct.price)}
                 </div>
 
                 <p className="text-xs text-neutral-500 font-sans leading-relaxed">

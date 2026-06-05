@@ -1,6 +1,7 @@
 import React from "react";
 import { CartItem } from "../types";
 import { Trash2, X, ShoppingBag, ArrowRight, Tag, Percent } from "lucide-react";
+import { formatDualPrice } from "../types";
 
 interface CartProps {
   isOpen: boolean;
@@ -133,7 +134,7 @@ export default function Cart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
                         </div>
 
                         <span className="font-bold text-xs text-brand-black font-sans ml-auto">
-                          ${item.product.price * item.quantity}
+                          {formatDualPrice(item.product.price * item.quantity)}
                         </span>
                       </div>
                     </div>
@@ -197,13 +198,13 @@ export default function Cart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
               <div className="space-y-2 text-[11px] uppercase tracking-wider font-bold text-neutral-500 border-t border-gray-200 pt-4 text-left font-sans">
                 <div className="flex justify-between">
                   <span>Subtotal value:</span>
-                  <span className="font-extrabold text-brand-black">${subtotal}</span>
+                  <span className="font-extrabold text-brand-black">{formatDualPrice(subtotal)}</span>
                 </div>
                 
                 {discountAmount > 0 && (
                   <div className="flex justify-between text-emerald-600">
                     <span>In-room Coupon Savings:</span>
-                    <span>-${discountAmount}</span>
+                    <span>-{formatDualPrice(discountAmount)}</span>
                   </div>
                 )}
                 
@@ -214,7 +215,7 @@ export default function Cart({ isOpen, onClose, cartItems, onUpdateQuantity, onR
 
                 <div className="flex justify-between text-xs font-bold text-brand-black border-t border-gray-200 pt-3">
                   <span className="serif uppercase tracking-widest">Your Grand Total:</span>
-                  <span className="font-sans text-brand-pink text-base">${finalTotal}</span>
+                  <span className="font-sans text-brand-pink text-base">{formatDualPrice(finalTotal)}</span>
                 </div>
               </div>
 

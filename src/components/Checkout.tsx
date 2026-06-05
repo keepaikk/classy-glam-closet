@@ -1,6 +1,7 @@
 import React from "react";
 import { CartItem } from "../types";
 import { CheckCircle, ArrowLeft, CreditCard, Sparkles, Building, ChevronRight, ClipboardCheck } from "lucide-react";
+import { formatDualPrice } from "../types";
 
 interface CheckoutProps {
   cartItems: CartItem[];
@@ -113,12 +114,12 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
             <div className="border-t border-gray-200 pt-3 space-y-1.5">
               <div className="flex justify-between">
                 <span>Total value of selections:</span>
-                <span className="font-bold text-brand-black">${subtotal || finalTotal + discountAmount}</span>
+                <span className="font-bold text-brand-black">{formatDualPrice(subtotal || finalTotal + discountAmount)}</span>
               </div>
               {discountAmount > 0 && (
                 <div className="flex justify-between text-emerald-600">
                   <span>Coupon {couponCode} Savings:</span>
-                  <span>-${discountAmount}</span>
+                  <span>-{formatDualPrice(discountAmount)}</span>
                 </div>
               )}
               <div className="flex justify-between">
@@ -127,7 +128,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
               </div>
               <div className="flex justify-between text-sm font-bold text-brand-black border-t border-dashed border-gray-200 pt-2">
                 <span className="serif uppercase tracking-widest text-xs">Paid Total:</span>
-                <span className="text-[#E85AA6] font-sans text-base">${finalTotal}</span>
+                <span className="text-[#E85AA6] font-sans text-base">{formatDualPrice(finalTotal)}</span>
               </div>
             </div>
 
@@ -328,7 +329,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                   </>
                 ) : (
                   <>
-                    Submit Booking &bull; ${finalTotal}
+                    Submit Booking &bull; {formatDualPrice(finalTotal)}
                   </>
                 )}
               </button>
@@ -355,7 +356,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                     <div className="text-[10px] text-neutral-500 font-medium font-sans uppercase tracking-wider">
                       <span>Size: {item.selectedSize.split(" ")[0]}</span> &bull; <span>Qty: {item.quantity}</span>
                     </div>
-                    <p className="font-bold text-xs text-brand-black font-sans">${item.product.price * item.quantity}</p>
+                    <p className="font-bold text-xs text-brand-black font-sans">{formatDualPrice(item.product.price * item.quantity)}</p>
                   </div>
                 </div>
               ))}
@@ -365,16 +366,16 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
             <div className="space-y-3 text-[11px] uppercase tracking-wider text-neutral-500 pt-2 text-left font-sans font-bold">
               <div className="flex justify-between">
                 <span>Total values selected:</span>
-                <span className="font-extrabold text-brand-black">${subtotal}</span>
+                <span className="font-extrabold text-brand-black">{formatDualPrice(subtotal)}</span>
               </div>
-              
+
               {discountAmount > 0 && (
                 <div className="flex justify-between text-emerald-600 font-extrabold text-[10px]">
                   <span>Applied Saving ({couponCode}):</span>
-                  <span>-${discountAmount}</span>
+                  <span>-{formatDualPrice(discountAmount)}</span>
                 </div>
               )}
-              
+
               <div className="flex justify-between">
                 <span>Shipping & handling:</span>
                 <span className="text-emerald-600 font-extrabold text-[10px]">Complementary Premium</span>
@@ -382,7 +383,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
 
               <div className="flex justify-between text-xs font-bold text-brand-black border-t border-gray-200 pt-4">
                 <span className="serif uppercase tracking-widest">Your Grand Final Due:</span>
-                <span className="text-[#E85AA6] font-sans text-lg">${finalTotal}</span>
+                <span className="text-[#E85AA6] font-sans text-lg">{formatDualPrice(finalTotal)}</span>
               </div>
             </div>
 

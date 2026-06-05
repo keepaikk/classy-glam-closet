@@ -32,6 +32,19 @@ export interface SizeCalculationResult {
   styleAdvice: string;
 }
 
+// Currency conversion: 1 USD = 15.70 GHS (approximate rate)
+export const GHS_RATE = 15.70;
+
+export function formatDualPrice(usdPrice: number): string {
+  const ghs = Math.round(usdPrice * GHS_RATE);
+  return `$${usdPrice} USD (₵${ghs.toLocaleString()} GHS)`;
+}
+
+export function formatShortPrice(usdPrice: number): string {
+  const ghs = Math.round(usdPrice * GHS_RATE);
+  return `$${usdPrice} / ₵${ghs.toLocaleString()}`;
+}
+
 export const PRODUCTS_DATA: Product[] = [
   {
     id: "prod-1",
