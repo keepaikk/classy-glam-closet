@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles, ShoppingBag, Ruler, Bot, Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Sparkles, ShoppingBag, Ruler, Bot, Heart, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 interface FooterProps {
   setActiveTab: (tab: string) => void;
@@ -71,6 +71,17 @@ export default function Footer({ setActiveTab }: FooterProps) {
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-brand-gold shrink-0" />
                 <span>+1 (800) CURV-CONCIERGE (287-8266)</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
+                <a
+                  href="https://wa.me/message/RJWNMTN3VDGMG1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-pink hover:text-brand-gold transition-colors hover:underline font-bold tracking-wider"
+                >
+                  WhatsApp Order Support
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-gold shrink-0" />
