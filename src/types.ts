@@ -1,3 +1,8 @@
+import product1Img from "./assets/images/product-1.jpg";
+import product2Img from "./assets/images/product-2.jpg";
+import product3Img from "./assets/images/product-3.jpg";
+import product4Img from "./assets/images/product-4.jpg";
+
 export interface Product {
   id: string;
   name: string;
@@ -52,7 +57,7 @@ export const PRODUCTS_DATA: Product[] = [
     tagline: "Dramatic asymmetric lines tailored for statuesque confidence",
     price: 249,
     category: "evening",
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600",
+    image: product1Img,
     description: "An absolute head-turner. Features fluid asymmetric shoulder draping, a custom gold metallic micro-buckle accent, and premium comfort-stretch jersey designed to sculpt and accentuate your natural waist.",
     details: [
       "Asymmetric shoulder draping with dual luxury gold-finish buckles",
@@ -74,7 +79,7 @@ export const PRODUCTS_DATA: Product[] = [
     tagline: "The iconic wrap style, re-imagined in bold Glam Pink",
     price: 189,
     category: "evening",
-    image: "https://images.unsplash.com/photo-1539008885759-24f5351de1f6?auto=format&fit=crop&q=80&w=600",
+    image: product2Img,
     description: "A breathtaking statement gown designed to celebrate true hourglass definitions. The plunging surplice V-neckline elongates the silhouette, and the broad sash defines your curves elegantly.",
     details: [
       "Broad structured adjustable sash tie",
@@ -96,7 +101,7 @@ export const PRODUCTS_DATA: Product[] = [
     tagline: "Power dressing with precise curved sculpting",
     price: 299,
     category: "corporate",
-    image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&q=80&w=600",
+    image: product3Img,
     description: "Redefine corporate elegance. This set includes a single-button sculpted-waist blazer with clean peak lapels, paired with high-waist straight-leg trousers crafted to flex comfortably throughout your busy day.",
     details: [
       "Blazer: single gold button closure, engineered back princess seams",
@@ -118,7 +123,7 @@ export const PRODUCTS_DATA: Product[] = [
     tagline: "Fluid, cascading layers for a soft, premium presentation",
     price: 320,
     category: "corporate",
-    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=600",
+    image: product4Img,
     description: "An ultra-premium layering duster tailored in rich soft cash-wool. Designed to float effortlessly over pants or dresses, framing the shoulders with modern confidence and providing a flattering, elongating line.",
     details: [
       "Ultra-soft cloud-cashmere blend",

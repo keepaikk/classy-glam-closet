@@ -1,5 +1,6 @@
 import React from "react";
 import { Sparkles, ArrowRight, Star } from "lucide-react";
+import heroImage from "../assets/images/logo-banner.jpg";
 
 interface HeroProps {
   onExplore: () => void;
@@ -8,9 +9,6 @@ interface HeroProps {
 }
 
 export default function Hero({ onExplore, onConsult, onSizeCalculator }: HeroProps) {
-  // Use the generated image path from AI image tool
-  const heroImage = "/src/assets/images/hero_luxury_curves_1780688203753.png";
-
   return (
     <section className="relative overflow-hidden bg-white border-b border-gray-100" id="hero-section">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 md:py-16 lg:py-20">
