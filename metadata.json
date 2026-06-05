@@ -1,0 +1,6 @@
+{
+  "name": "Classy Glam Closet",
+  "description": "Fashion That Celebrates Every Curve. High-end, premium, and luxurious shopping experience with curves calculators, styling concierges, and curation metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
