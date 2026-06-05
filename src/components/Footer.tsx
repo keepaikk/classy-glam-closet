@@ -70,7 +70,10 @@ export default function Footer({ setActiveTab }: FooterProps) {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-brand-gold shrink-0" />
-                <span>+1 (800) CURV-CONCIERGE (287-8266)</span>
+                <div className="flex flex-col">
+                  <span>050 012 6969 (Ghana)</span>
+                  <span>+233 50 012 6969</span>
+                </div>
               </li>
               <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
@@ -85,7 +88,14 @@ export default function Footer({ setActiveTab }: FooterProps) {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-gold shrink-0" />
-                <span>84 Luxury Boulevard, Beverly Hills, CA 90210</span>
+                <a
+                  href="https://www.ghanapostgps.com/map/#GD0072524"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-pink hover:text-brand-gold transition-colors hover:underline font-bold tracking-wider"
+                >
+                  Ghana Post GPS: GD-007-2524
+                </a>
               </li>
             </ul>
               

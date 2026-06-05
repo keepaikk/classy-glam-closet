@@ -33,9 +33,9 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
     setFirstName("Evelyn");
     setLastName("Glamour");
     setEmail("evelyn.curves@cloglam.com");
-    setAddress("84 Luxury Boulevard, Apt Curve-5");
-    setCity("Beverly Hills");
-    setZip("90210");
+    setAddress("Ghana Post GPS GD-007-2524, Near Landmark");
+    setCity("Accra");
+    setZip("GD0072524");
     setCardNumber("4111 8888 9999 5555");
     setExpDate("12/28");
     setCvv("777");
@@ -256,7 +256,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     className="w-full text-xs border border-gray-200 rounded-none px-3.5 py-3 outline-hidden focus:border-[#E85AA6] bg-neutral-50/50 font-sans"
-                    placeholder="123 Curve Avenue, Suite Luxury"
+                    placeholder="Ghana Post GPS GD-007-2524, Near Landmark"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -268,7 +268,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
                       className="w-full text-xs border border-gray-200 rounded-none px-3.5 py-3 outline-hidden focus:border-[#E85AA6] bg-neutral-50/50 font-sans"
-                      placeholder="New York"
+                      placeholder="Accra"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -279,7 +279,7 @@ export default function Checkout({ cartItems, discountAmount, finalTotal, coupon
                       value={zip}
                       onChange={(e) => setZip(e.target.value)}
                       className="w-full text-xs border border-gray-200 rounded-none px-3.5 py-3 outline-hidden focus:border-[#E85AA6] bg-neutral-50/50 font-sans"
-                      placeholder="10001"
+                      placeholder="GD0072524"
                     />
                   </div>
                 </div>
